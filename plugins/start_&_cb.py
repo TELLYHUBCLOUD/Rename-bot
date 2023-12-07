@@ -36,8 +36,8 @@ async def start(client, message):
     button = InlineKeyboardMarkup([[
         InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
         ],[
-        InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/funkomovies'),
-        InlineKeyboardButton('💁‍♂️ Channel', url='https://t.me/funkomovies')
+        InlineKeyboardButton('📯 🆄🅿🅳🅰🆃🅴🆂', url='https://t.me/funkomovies'),
+        InlineKeyboardButton('💁‍♂️ 🅲🅷🅰🅽🅽🅴🅻', url='https://t.me/funkomovies')
         ],[
         InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
@@ -58,8 +58,8 @@ async def cb_handler(client, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup([[
                 InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
                 ],[
-                InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/funkomovies'),
-                InlineKeyboardButton('💁‍♂️ Channel', url='https://t.me/funkomovies')
+                InlineKeyboardButton('📯 🆄🅿🅳🅰🆃🅴🆂', url='https://t.me/funkomovies'),
+                InlineKeyboardButton('💁‍♂️ 🅲🅷🅰🅽🅽🅴🅻', url='https://t.me/funkomovies')
                 ],[
                 InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
                 InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
