@@ -37,7 +37,7 @@ async def start(client, message):
         InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
         ],[
         InlineKeyboardButton('📯 🆄🅿🅳🅰🆃🅴🆂', url='https://t.me/funkomovies'),
-        InlineKeyboardButton('💁‍♂️ 🅲🅷🅰🅽🅽🅴🅻', url='https://t.me/funkomovies')
+        InlineKeyboardButton('💁‍♂️ 🅲🅷🅰🅽🅽🅴🅻', url='https://t.me/primeprosmovies')
         ],[
         InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
@@ -59,7 +59,7 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
                 ],[
                 InlineKeyboardButton('📯 🆄🅿🅳🅰🆃🅴🆂', url='https://t.me/funkomovies'),
-                InlineKeyboardButton('💁‍♂️ 🅲🅷🅰🅽🅽🅴🅻', url='https://t.me/funkomovies')
+                InlineKeyboardButton('💁‍♂️ 🅲🅷🅰🅽🅽🅴🅻', url='https://t.me/primeprosmovies')
                 ],[
                 InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
                 InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
