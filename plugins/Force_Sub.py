@@ -46,13 +46,13 @@ async def not_subscribed(_, client, message):
 async def forces_sub(client, message):
     buttons = [[InlineKeyboardButton(text="📢 Join Update Channel 📢", url=f"https://t.me/{Config.FORCE_SUB}"),
                InlineKeyboardButton(text='✨ Mᴏᴠɪᴇ Gʀᴏᴜᴘ ✨', url="https://t.me/funkomovies")]
-              ],
-              [
+              ],[
                 InlineKeyboardButton(
                     text = 'Try Again',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]]
+              
               
               
     text = "**Sᴏʀʀy Dᴜᴅᴇ Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. Sᴏ Pʟᴇᴀꜱᴇ Jᴏɪɴ Oᴜʀ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Cᴄᴏɴᴛɪɴᴜᴇ**"
