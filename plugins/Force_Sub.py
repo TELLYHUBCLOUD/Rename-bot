@@ -55,7 +55,7 @@ async def forces_sub(client, message):
     text = "**Sᴏʀʀy Dᴜᴅᴇ Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. Sᴏ Pʟᴇᴀꜱᴇ Jᴏɪɴ Oᴜʀ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Cᴄᴏɴᴛɪɴᴜᴇ**"
     try:
         [[InlineKeyboardButton(text = 'Try Again', url = f"https://t.me/{client.username}?start={message.command[1]}"),
-        InlineKeyboardButton(text='✨ Mᴏᴠɪᴇ Gʀᴏᴜᴘ ✨', url="https://t.me/funkomovies")]
+        InlineKeyboardButton(text='✨ Mᴏᴠɪᴇ Gʀᴏᴜᴘ ✨', url="https://t.me/funkomovies")]]
         user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)    
         if user.status == enums.ChatMemberStatus.BANNED:                                   
             return await client.send_message(message.from_user.id, text="Sᴏʀʀy Yᴏᴜ'ʀᴇ Bᴀɴɴᴇᴅ Tᴏ Uꜱᴇ Mᴇ")  
