@@ -45,9 +45,9 @@ async def not_subscribed(_, client, message):
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def forces_sub(client, message):
     buttons = [[
-                InlineKeyboardButton(text="📢 Join Update Channel 📢", url=f"https://t.me/{Config.FORCE_SUB}"),
+                InlineKeyboardButton(text="📢JOIN CHANNEL 1📢", url=f"https://t.me/{Config.FORCE_SUB}"),
             ],[
-               InlineKeyboardButton(text='JOIN CHANNEL 2', url="https://t.me/funkomovies")
+               InlineKeyboardButton(text='📢JOIN CHANNEL 2📢', url="https://t.me/funkomovies")
               ]]
                                      
     text = "Sᴏʀʀy Dᴜᴅᴇ Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. Sᴏ Pʟᴇᴀꜱᴇ Jᴏɪɴ Oᴜʀ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Cᴄᴏɴᴛɪɴᴜᴇ"
