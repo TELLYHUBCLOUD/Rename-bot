@@ -45,20 +45,19 @@ async def not_subscribed(_, client, message):
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def forces_sub(client, message):
      buttons = [[
-        [InlineKeyboardButton(text="📢JOIN CHANNEL 1📢", url=f"https://t.me/{Config.FORCE_SUB}")],
-        [InlineKeyboardButton(text='📢JOIN CHANNEL 2📢', url="https://t.me/funkomovies")],
-        [InlineKeyboardButton(text='Try Again', url=f"https://t.me/{client.username}?start={message.command[1]}")],  # Added Try Again button
-    ]]
-                                     
-    text = "Sᴏʀʀy Dᴜᴅᴇ Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. Sᴏ Pʟᴇᴀꜱᴇ Jᴏɪɴ Oᴜʀ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ ᴄᴏɴᴛɪɴᴜᴇ"
-
-    try:
+               [InlineKeyboardButton(text="📢JOIN CHANNEL 1📢", url=f"https://t.me/{Config.FORCE_SUB}")],
+               [InlineKeyboardButton(text='📢JOIN CHANNEL 2📢', url="https://t.me/funkomovies")],
+               [InlineKeyboardButton(text='Try Again', url=f"https://t.me/{client.username}?start={message.command[1]}")],  # Added Try Again button
+               ]]
+     text = "Sᴏʀʀy Dᴜᴅᴇ Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. Sᴏ Pʟᴇᴀꜱᴇ Jᴏɪɴ Oᴜʀ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ ᴄᴏɴᴛɪɴᴜᴇ"
+     try:
         user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
         if user.status == enums.ChatMemberStatus.BANNED:
             return await client.send_message(message.from_user.id, text="Sᴏʀʀy Yᴏᴜ'ʀᴇ Bᴀɴɴᴇᴅ Tᴏ Uꜱᴇ Mᴇ")
     except UserNotParticipant:
         return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons + try_again_button))
      return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
+    
           
 
 
