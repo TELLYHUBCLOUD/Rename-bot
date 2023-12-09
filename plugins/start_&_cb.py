@@ -34,13 +34,13 @@ async def start(client, message):
     user = message.from_user
     await db.add_user(client, message)                
     button = InlineKeyboardMarkup([[
-        InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
+        InlineKeyboardButton("👨‍💻 𝐃ᴇᴠꜱ 👨‍💻", callback_data='dev')
         ],[
-        InlineKeyboardButton('📯 🆄🅿🅳🅰🆃🅴🆂', url='https://t.me/funkomovies'),
-        InlineKeyboardButton('💁‍♂️ 🅲🅷🅰🅽🅽🅴🅻', url='https://t.me/primeprosmovies')
+        InlineKeyboardButton('📯𝐔𝐩𝐝𝐚𝐭𝐞𝐬', url='https://t.me/funkomovies'),
+        InlineKeyboardButton('💁‍♂️𝐂𝐡𝐚𝐧𝐧𝐞𝐥𝐬', url='https://t.me/primeprosmovies')
         ],[
-        InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
+        InlineKeyboardButton('🎛️ 𝐀ʙᴏᴜᴛ', callback_data='about'),
+        InlineKeyboardButton('🛠️ 𝐇ᴇʟᴩ', callback_data='help')
     ]])
     if Config.START_PIC:
         await message.reply_photo(Config.START_PIC, caption=Txt.START_TXT.format(user.mention), reply_markup=button)       
@@ -56,13 +56,13 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.START_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup = InlineKeyboardMarkup([[
-                InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
+                InlineKeyboardButton("👨‍💻 𝐃ᴇᴠꜱ 👨‍💻", callback_data='dev')
                 ],[
-                InlineKeyboardButton('📯 🆄🅿🅳🅰🆃🅴🆂', url='https://t.me/funkomovies'),
-                InlineKeyboardButton('💁‍♂️ 🅲🅷🅰🅽🅽🅴🅻', url='https://t.me/primeprosmovies')
+                InlineKeyboardButton('📯 𝐔𝐩𝐝𝐚𝐭𝐞𝐬', url='https://t.me/funkomovies'),
+                InlineKeyboardButton('💁‍♂️ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥𝐬', url='https://t.me/primeprosmovies')
                 ],[
-                InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
-                InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
+                InlineKeyboardButton('🎛️ 𝐀ʙᴏᴜᴛ', callback_data='about'),
+                InlineKeyboardButton('🛠️ 𝐇ᴇʟᴩ', callback_data='help')
             ]])
         )
     elif data == "help":
