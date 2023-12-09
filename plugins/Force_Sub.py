@@ -44,20 +44,29 @@ async def not_subscribed(_, client, message):
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def forces_sub(client, message):
     buttons = [
-        [InlineKeyboardButton(text="🦋JOIN CHANNEL 1🦋", url=f"https://t.me/{Config.FORCE_SUB}"),
-         InlineKeyboardButton(text='🦋JOIN CHANNEL 2🦋', url="https://t.me/funkomovies")],
-        [InlineKeyboardButton(text='Try Again', url=f"https://t.me/{client.username}?start={message.command[1]}")] if message.command and len(message.command) > 1 else [],
+        [
+            InlineKeyboardButton(text="🦋JOIN CHANNEL 1🦋", url=f"https://t.me/{Config.FORCE_SUB}"),
+            InlineKeyboardButton(text='🦋JOIN CHANNEL 2🦋', url="https://t.me/funkomovies")
+        ]
     ]
     text = "**Sᴏʀʀʏ Dᴜᴅᴇ Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. Sᴏ Pʟᴇᴀꜱᴇ Jᴏɪɴ Oᴜʀ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Cᴄᴏɴᴛɪɴᴜᴇ**"
     
     try:
-        user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)    
-        if user.status == enums.ChatMemberStatus.BANNED:                                   
-            return await client.send_message(message.from_user.id, text="Sᴏʀʀy Yᴏᴜ'ʀᴇ Bᴀɴɴᴇᴅ Tᴏ Uꜱᴇ Mᴇ")  
+        user_channel_1 = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+        user_channel_2 = await client.get_chat_member(-1002000993185, message.from_user.id)
+        
+        if user_channel_1.status == enums.ChatMemberStatus.MEMBER and user_channel_2.status == enums.ChatMemberStatus.MEMBER:
+            # User is subscribed to both channels, continue with your logic
+            return await message.reply_text(text="You are subscribed to both channels! Continue with your logic.")
+        
+        # User is not subscribed to both channels, display the "Try Again" button
+        buttons.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.username}?start={message.command[1]}")])
+        
     except UserNotParticipant:                       
-        return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
+        pass
+    
+    text = "**Sᴏʀʀʏ Dᴜᴅᴇ Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. Sᴏ Pʟᴇᴀꜱᴇ Jᴏɪɴ Oᴜʀ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Cᴄᴏɴᴛɪɴᴜᴇ**"
     return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
-
 
     
           
