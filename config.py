@@ -26,18 +26,18 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    API_ID    = os.environ.get("API_ID", "20227614")
+    API_HASH  = os.environ.get("API_HASH", "b9268f7d01884a3d740ba17d0ad8754b")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6970557341:AAHGbp7RrvYsbpH4Hx2lvuAmn92vMeMayc4") 
    
     # database config
-    DB_NAME = os.environ.get("DB_NAME","pyro-botz")     
-    DB_URL  = os.environ.get("DB_URL","")
+    DB_NAME = os.environ.get("DB_NAME","Cluster0")     
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://razer:razer@cluster0.ryb7bbl.mongodb.net/?retryWrites=true&w=majority")
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
+    START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/ef9e6bb0f49605ecace6b.mp4")
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '20227614').split()]
     FORCE_SUB   = os.environ.get("FORCE_SUB", "https://t.me/primeprosmovies") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", None))
 
