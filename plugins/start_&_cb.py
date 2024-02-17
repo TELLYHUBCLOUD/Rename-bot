@@ -36,8 +36,8 @@ async def start(client, message):
     button = InlineKeyboardMarkup([[
         InlineKeyboardButton("👨‍💻 𝐃ᴇᴠꜱ 👨‍💻", callback_data='dev')
         ],[
-        InlineKeyboardButton('📯𝐔𝐩𝐝𝐚𝐭𝐞𝐬', url='https://t.me/funkomovies'),
-        InlineKeyboardButton('💁‍♂️𝐂𝐡𝐚𝐧𝐧𝐞𝐥𝐬', url='https://t.me/primeprosmovies')
+        InlineKeyboardButton('📯𝐔𝐩𝐝𝐚𝐭𝐞𝐬', url='https://t.me/Prime_Movieshd'),
+        InlineKeyboardButton('💁‍♂️𝐂𝐡𝐚𝐧𝐧𝐞𝐥𝐬', url='https://t.me/Tiger_3_Animal_12th_fail')
         ],[
         InlineKeyboardButton('🎛️ 𝐀ʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('🛠️ 𝐇ᴇʟᴩ', callback_data='help')
@@ -58,8 +58,8 @@ async def cb_handler(client, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup([[
                 InlineKeyboardButton("👨‍💻 𝐃ᴇᴠꜱ 👨‍💻", callback_data='dev')
                 ],[
-                InlineKeyboardButton('📯 𝐔𝐩𝐝𝐚𝐭𝐞𝐬', url='https://t.me/funkomovies'),
-                InlineKeyboardButton('💁‍♂️ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥𝐬', url='https://t.me/primeprosmovies')
+                InlineKeyboardButton('📯 𝐔𝐩𝐝𝐚𝐭𝐞𝐬', url='https://t.me/Prime_Movieshd'),
+                InlineKeyboardButton('💁‍♂️ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥𝐬', url='https://t.me/Tiger_3_Animal_12th_fail')
                 ],[
                 InlineKeyboardButton('🎛️ 𝐀ʙᴏᴜᴛ', callback_data='about'),
                 InlineKeyboardButton('🛠️ 𝐇ᴇʟᴩ', callback_data='help')
