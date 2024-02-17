@@ -38,7 +38,7 @@ class Config(object):
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/ef9e6bb0f49605ecace6b.mp4")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '20227614').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "https://t.me/primeprosmovies") 
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "https://t.me/Prime_Movieshd") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", None))
 
     # wes response configuration     
