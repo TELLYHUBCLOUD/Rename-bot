@@ -28,7 +28,7 @@ class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "20227614")
     API_HASH  = os.environ.get("API_HASH", "b9268f7d01884a3d740ba17d0ad8754b")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6970557341:AAHGbp7RrvYsbpH4Hx2lvuAmn92vMeMayc4") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6743426171:AAFWzQGVDEJD9DeyPl7CGLVfoR4ZbFmqCzI") 
    
     # database config
     DB_NAME = os.environ.get("DB_NAME","Cluster0")     
@@ -36,7 +36,7 @@ class Config(object):
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/ef9e6bb0f49605ecace6b.mp4")
+    START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/651b36cd8969dcc6b41b6.jpg")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '20227614').split()]
     FORCE_SUB   = os.environ.get("FORCE_SUB", "https://t.me/Prime_Movieshd") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", None))
